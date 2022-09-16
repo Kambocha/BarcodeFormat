@@ -44,7 +44,7 @@ namespace BarcodeTypeTwo
             scanner.BottomText = "Wait for the barcode to automatically scan!";
 
             //Start scanning
-            var result = await scanner.Scan();
+            ZXing.Result result = await scanner.Scan();
 
             HandleScanResult(result);
         }
@@ -59,7 +59,7 @@ namespace BarcodeTypeTwo
             }
             else
             {
-                barcodeTypeTextView.Text = "Scanning Canceled!";
+                barcodeTypeTextView.Text = "Canceled!";
             }
         }
 

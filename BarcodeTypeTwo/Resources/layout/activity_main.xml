@@ -4,38 +4,61 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:weightSum="5"
+    android:gravity="center_vertical"
     android:clipToPadding="false"
     android:orientation="vertical"
-    android:padding="24dp"
+    android:background="#1434A4"
     tools:context=".MainActivity">
-  
-    <!--TextView2 widget inside ViewGroup1-->
+
+    <ImageView
+        android:src="@drawable/tulogo"
+        android:layout_width="100dp"
+        android:layout_height="70dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_weight="1"
+        android:id="@+id/imageView1" />
+
+
     <TextView
         android:id="@+id/formatResult"
         style="@style/TextAppearance.MaterialComponents.Headline6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="156dp"
-        android:text="Result"
+        android:layout_gravity="center"
+        android:layout_weight="1"
         android:textSize="20pt"
-        android:layout_gravity="center_horizontal"/>
-  
-    <!--ViewGroup2-->
-    <RelativeLayout
-        android:layout_width="match_parent"
+        android:text="Result"/>
+    
+    <TextView
+        android:id="@+id/textView1" 
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:clipToPadding="false"
-        android:gravity="center">
+        android:layout_gravity="center_horizontal"
+        android:layout_weight="1"
+        android:paddingHorizontal="10dp"
+        android:text="URL"/>
+
+    
+
+
+<!--    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""/>
+    </LinearLayout>-->
+    
+    
+    <Button
+        android:id="@+id/scanButton"
+        android:layout_width="176.0dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/formatResult"
+        android:layout_gravity="center"
+        android:layout_weight="0.30"
+        android:text="SCAN"/>
   
-        <!--Button widget inside ViewGroup2-->
-        <Button
-            android:id="@+id/scanButton"
-            android:layout_width="176.0dp"
-            android:layout_height="70.0dp"
-            android:layout_below="@id/formatResult"
-            android:layout_marginTop="50dp"
-            android:text="SCAN"/>
-  
-    </RelativeLayout><!--End of ViewGroup2-->
-  
-</LinearLayout><!--End of ViewGroup1-->
+</LinearLayout>
