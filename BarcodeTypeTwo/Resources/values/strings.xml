@@ -1,4 +1,11 @@
 <resources>
     <string name="app_name">BarcodeTypeTwo</string>
     <string name="action_settings">Settings</string>
+	<string name="image_description">tulogo</string>
+	<string name="result">Result</string>
+	<string name="url">URL</string>
+	<string name="copy_format">Copy Format</string>
+	<string name="copy_url">Copy  URL / TEXT</string>
+	<string name="scan">SCAN</string>
+	<string name="copyright">Copyright © 2022 - TU Sofia</string>
 </resources>

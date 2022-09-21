@@ -4,61 +4,88 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:weightSum="5"
     android:gravity="center_vertical"
     android:clipToPadding="false"
+    android:paddingTop="50dp"
     android:orientation="vertical"
-    android:background="#1434A4"
+    android:background="#edf0f2"
     tools:context=".MainActivity">
 
     <ImageView
+        android:id="@+id/tulogo"
         android:src="@drawable/tulogo"
+        android:contentDescription="@string/image_description"
         android:layout_width="100dp"
-        android:layout_height="70dp"
+        android:layout_height="100dp"
         android:layout_gravity="center_horizontal"
-        android:layout_weight="1"
-        android:id="@+id/imageView1" />
-
+        android:layout_marginBottom="30dp" />
 
     <TextView
         android:id="@+id/formatResult"
+        android:text="@string/result"
         style="@style/TextAppearance.MaterialComponents.Headline6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_weight="1"
         android:textSize="20pt"
-        android:text="Result"/>
-    
+        android:textColor="#ff4767b3"
+        android:layout_marginBottom="45.0dp" />
+
     <TextView
-        android:id="@+id/textView1" 
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:layout_weight="1"
-        android:paddingHorizontal="10dp"
-        android:text="URL"/>
-
-    
-
-
-<!--    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text=""/>
-    </LinearLayout>-->
-    
-    
-    <Button
-        android:id="@+id/scanButton"
-        android:layout_width="176.0dp"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/formatResult"
+        android:id="@+id/urlTextView"
+        android:text="@string/url"
+        android:layout_width="277.0dp"
+        android:layout_height="100.0dp"
         android:layout_gravity="center"
-        android:layout_weight="0.30"
-        android:text="SCAN"/>
+        android:gravity="center_horizontal"
+        android:layout_marginBottom="3.0dp"
+        android:paddingHorizontal="10dp"
+        android:paddingVertical="10dp"
+        android:textColor="#ff4767b3" />
+
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal">
+            <Button
+                android:id="@+id/copyFormat"
+                android:text="@string/copy_format"
+                android:textColor="#ffffff"
+                android:layout_width="150dp"
+                android:layout_height="52.0dp"
+                android:backgroundTint="#ff4767b3"
+                app:backgroundTint="#ff4767b3" />
+            <Button
+                android:id="@+id/copyUrl"
+                android:text="@string/copy_url"
+                android:textColor="#ffffff"
+                android:layout_width="150dp"
+                android:layout_height="52.0dp"
+                android:backgroundTint="#ff4767b3" />
+        </LinearLayout>
+
+
+        <Button
+            android:id="@+id/scanButton"
+            android:text="@string/scan"
+            android:layout_width="176.0dp"
+            android:layout_height="52.0dp"
+            android:layout_gravity="center"
+            android:textColor="#ffffff"
+            android:backgroundTint="#ff4767b3" />
+        
+
+        <TextView
+            android:id="@+id/infoLabel"
+            android:text="@string/copyright"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textColor="#ff4767b3"
+            android:clickable="true"
+            android:textSize="5pt"
+            android:gravity="bottom"/>
   
 </LinearLayout>
